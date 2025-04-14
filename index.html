@@ -93,7 +93,9 @@
                     <div class="layer">
                         <h3>MERN Stack Chat App</h3>
                         <p>A real-time chat app built with the MERN stack, featuring secure user authentication and instant messaging.</p>
-                        <a href = 'https://mern-stack-chat-app-g2jk.onrender.com'><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href = 'https://mern-stack-chat-app-g2jk.onrender.com'>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="work">
@@ -101,19 +103,55 @@
                     <div class="layer">
                         <h3>Dino Game</h3>
                         <p>A fun, endless-runner Dino game built using JavaScript, where the player controls a dinosaur to avoid obstacles and keep running.</p>
-                        <a href = 'https://mnrkvalli.github.io/DinoGame/ '><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href = 'https://mnrkvalli.github.io/DinoGame/ '>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div class="work">
                     <img src = 'Images/to-do.jpg'/>
                     <div class="layer">
                         <h3>To-do List Application</h3>
                         <p>A simple yet efficient To-Do list app built with JavaScript, enabling users to add, edit, and delete tasks while tracking their progress.</p>
-                        <a href = 'https://kalpavallitodo.ccbp.tech'><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href = 'https://kalpavallitodo.ccbp.tech'>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a> 
                     </div>
                 </div>
+
+
+                <div class="work additional hidden">
+                    <img src = 'Images/autocomplete.png'/>
+                    <div class="layer">
+                        <h3>Text Autocomplete</h3>
+                        <p>Built an LSTM-based deep learning model to predict the next word in a sentence, using a custom text corpus.</p>
+                        <a href = 'https://github.com/mnrkvalli/Text_Autocomplete'>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a> 
+                    </div>
+                </div>
+                
+
+                <div class="work additional hidden">
+                    <img src = 'Images/wikipedia.jpg'/>
+                    <div class="layer">
+                        <h3>Wikipedia website</h3>
+                        <p>A real-time Wikipedia search app that fetches and displays article titles, descriptions, and links based on user input.</p>
+                        <a href = 'https://mnrkwiki.ccbp.tech/'>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a> 
+                    </div>
+                </div>
+
+                
+                
+
             </div>
-            <a href = '#' class="btn">See more</a>
+            <div class="button-container">
+                <a href="javascript:void(0)" id="seeMoreBtn" class="btn">See more</a>
+                <a href="javascript:void(0)" id="seeLessBtn" class="btn hidden">Hide</a>
+              </div>
         </div>
     </div>
 
@@ -198,6 +236,28 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+  const seeLessBtn = document.getElementById("seeLessBtn");
+  const additionalProjects = document.querySelectorAll(".work.additional");
+
+  seeMoreBtn.addEventListener("click", () => {
+    additionalProjects.forEach(project => project.classList.remove("hidden"));
+    seeMoreBtn.classList.add("hidden");
+    seeLessBtn.classList.remove("hidden");
+  });
+
+  seeLessBtn.addEventListener("click", () => {
+    additionalProjects.forEach(project => project.classList.add("hidden"));
+    seeMoreBtn.classList.remove("hidden");
+    seeLessBtn.classList.add("hidden");
+  });
+});
+
+
   </script>
 
 

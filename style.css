@@ -397,3 +397,41 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+
+
+/* Hide elements with the 'hidden' class */
+.hidden {
+  display: none;
+}
+
+/* Ensure .work elements wrap correctly */
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Style for individual .work items */
+.work {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .work {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .work {
+    flex: 1 1 100%;
+  }
+}
+
+/* Center the button container */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
